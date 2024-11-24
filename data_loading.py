@@ -1,12 +1,6 @@
-import torch
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import os
-
-from matplotlib.collections import LineCollection
-import torchdata.datapipes as dp
-from torch.utils.data import DataLoader
 
 def read_lifespan_file(filename):
     """
