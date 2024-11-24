@@ -23,6 +23,7 @@ def read_lifespan_file(filename):
     # read the .csv file into a pandas dataframe
     try:
         df = pd.read_csv(filename, header=None)
+        print(f"Shape of file {filename}: {df.shape}")
         return df.to_numpy()
 
     except Exception as e:
