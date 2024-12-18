@@ -17,12 +17,12 @@ parser = argparse.ArgumentParser()
 
 # Adding optional argument
 parser.add_argument("-t", "--Task", help = "task to perform:\
-                    \n  'clf': classification, using settings defined in config.py\
-                    \n  'reg': regression, using settings defined in config.py\
-                    \n  'clf_opt': grid search optimization on classification task\
+                    \n  'clf': classification, using settings defined in config.py;\
+                    \n  'reg': regression, using settings defined in config.py;\
+                    \n  'clf_opt': grid search optimization on classification task;\
                     \n  'reg_opt': grid search optimization on regression task", default = "reg")
 parser.add_argument("-m:", "--Model", help = "Model(s) to use:\
-                    \n  'simple': simple models\
+                    \n  'simple': simple models;\
                     \n  'CNN': convolutional neural network", default = "CNN")
 parser.add_argument("-d:", "--Drug", help = "which drug to run the training: '1' or '2'", default = 1, type=int)
 parser.add_argument("-s", "--SameGroup", help =  "run testing on same drug as training: 'True' or 'False'", default = "True" )
