@@ -4,24 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-import matplotlib
-from matplotlib.collections import LineCollection
 import matplotlib.pyplot as plt
-from functools import partial
-from torchvision import datasets, transforms
-
-import data_loading
-import neural_net
-from neural_net import MLP_model
 import utils
-
-import pandas as pd
-
 from data_cleaning import *
-
-from sklearn.decomposition import PCA
-from sklearn.cluster import KMeans
-import umap.umap_ as umap
 from torcheval.metrics import R2Score
 
 import random
@@ -189,7 +174,7 @@ class modelContainer():
                 r2 = metric.compute().detach()
                 if self.verbose:
                     print(f"Predicted labels: {y_pred[mask]}")
-                    print(f"Predicted labels: {y_test[mask]}")
+                    print(f"Actual labels: {y_test[mask]}")
                     print(f"{group.capitalize()} - MSE: {mse:.4f}, MAE: {mae:.4f}, RMSE: {rmse:.4f}, R2: {r2:.4f}")
 
             return [mse, mae, rmse, r2]
@@ -204,7 +189,7 @@ class modelContainer():
 
             if self.verbose:
                 print(f"Predicted labels: {y_pred}")
-                print(f"Predicted labels: {y_test}")
+                print(f"Actual labels: {y_test}")
                 print(f"Accuracy: {acc}")
                 print(f"F-score: {f_score}")
 

@@ -438,6 +438,7 @@ def load_data(death_threshold=DEATH_THRESHOLD, death_length=DEATH_LENGTH,periods
             y_test_drug_binary = y_test_drug_binary[mask1][mask2][mask3].astype(bool)
             y_test_drug_binary = y_test_drug_binary[indices][train_size:]
         train_val_split = 0.8
+        
         if mode == "lifespan":
             equal_label_prop = False
         else:

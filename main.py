@@ -1,32 +1,14 @@
 # %matplotlib inline
 import torch
-import matplotlib.pyplot as plt
 import numpy as np
-import os
-
-import matplotlib
-from matplotlib.collections import LineCollection
-import matplotlib.pyplot as plt
-from functools import partial
-from torchvision import datasets, transforms
+import argparse
 
 import data_loading
 import neural_net
 import utils
-
-import pandas as pd
-
 from data_cleaning import *
 from config import *
-
-from sklearn.decomposition import PCA
-from sklearn.cluster import KMeans
-import umap.umap_ as umap
-from torcheval.metrics import R2Score
-
 from modelContainer import modelContainer
-import argparse
-
 import simple_models
 from features import get_features
 

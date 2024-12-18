@@ -22,6 +22,8 @@ def clf_task(X_train,y_train,X_test,y_test):
     def evaluate_clf(clf, X_train, y_train, X_test, y_test):
         clf.fit(X_train, y_train)
         y_pred = clf.predict(X_test)
+        y_pred = np.array(y_pred)
+        y_test = np.array(y_test)
         print("Accuracy: ", accuracy_score(y_test, y_pred))
         print("F1: ", f1_score(y_test, y_pred))
 
@@ -62,6 +64,8 @@ def reg_task( x_train, y_train, x_test, y_test, y_test_drug_binary):
                 mask = ~y_test_drug_binary
             else:
                 mask = np.ones(len(y_test), dtype=bool)
+            y_pred = np.array(y_pred)
+            y_test = np.array(y_test)
             mse = mean_squared_error(y_test[mask], y_pred[mask])
             mae = mean_absolute_error(y_test[mask], y_pred[mask])
             rmse = np.sqrt(mse)
