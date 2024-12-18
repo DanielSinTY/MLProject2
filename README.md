@@ -15,7 +15,7 @@ cd MLProject2
 ```
 and install the dependencies:
 ```
-pip install requirements.txt
+pip install -r requirements.txt --user 
 ```
 
 ## Usage

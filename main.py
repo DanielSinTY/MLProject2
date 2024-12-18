@@ -220,6 +220,11 @@ else:
         x_train = get_features(x_train)
         x_test = get_features(x_test_main)
 
+        x_train = x_train.detach().numpy()
+        y_train = y_train.detach().numpy()
+        x_test = x_test.detach().numpy()
+        y_test_main = y_test_main.detach().numpy()
+
         if args.Task == "clf":
             simple_models.clf_task(x_train, y_train, x_test, y_test_main)
         elif args.Task == "reg":
