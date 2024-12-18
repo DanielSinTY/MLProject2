@@ -1,5 +1,6 @@
 # CS 433 Machine Learning Project 2: Drug Treatment Classification and Lifespan Prediction of C. elegans using Machine Learning Techniques
 
+(For those who are confused why everything is pushed in a single commit, this is because we have included confidential information of the drugs in the initial stages of the project and hence we have to remove the commit history for condifential concerns)
 ## Overview
 This repository contains the code of CS 433 Machine Learning Project 2. In this project, we utilise different machine learning models to disguish c. elegans treated with drugs from those not and predict lifespan of c. elegans, 
 using early behavioral data, in specific, x-y coordinates of center of mass in the first 2 days.
