@@ -50,19 +50,19 @@ def load_lifespan_data(data_path,mode="binary", drug_path=None, control_path=Non
             N x 1 array of labels
     """
     if drug_path is None:
-        drug_path = data_path + "\companyDrug"
+        drug_path = data_path + "\1_drug"
     else:
         drug_path = data_path + drug_path
     if control_path is None:
-        control_path = data_path + "\control"
+        control_path = data_path + "\1_control"
     else:
         control_path = data_path + control_path
     # list all treated and control .csv files in the directory
-    # drug_path = data_path + "\companyDrug"    
+    # drug_path = data_path + "\1_drug"    
     drug_files = os.listdir(drug_path)
     drug_files = [f for f in drug_files if f.endswith(".csv")]
 
-    # control_path = data_path + "\control"
+    # control_path = data_path + "\1_control"
     control_files = os.listdir(control_path)
     control_files = [f for f in control_files if f.endswith(".csv")]
 
