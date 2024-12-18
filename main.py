@@ -21,7 +21,6 @@ from config import *
 
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
-import umap.umap_ as umap
 from torcheval.metrics import R2Score
 
 from modelContainer import modelContainer
@@ -237,6 +236,11 @@ else:
         y_train = torch.cat([y_train, y_val],0)
         x_train = get_features(x_train)
         x_test = get_features(x_test_main)
+
+        x_train = x_train.detach().numpy()
+        y_train = y_train.detach().numpy()
+        x_test = x_test.detach().numpy()
+        y_test_main = y_test_main.detach().numpy()
 
         if args.Task == "clf":
             simple_models.clf_task(x_train, y_train, x_test, y_test_main)

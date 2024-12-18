@@ -21,7 +21,6 @@ from data_cleaning import *
 
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
-import umap.umap_ as umap
 from torcheval.metrics import R2Score
 
 import random
