@@ -27,14 +27,11 @@ This command contains various arguments to be set by the users, for different ta
 ```
 python main.py --help
 ```
-To modify the hyperparameters for a CNN model training, edit the dictionaries in 
-```
-config.py
-```
-CNN_CLF_CONFIG: hyperparameters used for classification. Currently set as the hyperparameters values optimal for drug 1 training.
-CNN_REG_CONFIG: hyperparameters used for regression. Currently set as the hyperparameters values optimal for drug 1 training.
-GRID_SEARCH_REG: the set of hyperparameters tested in fine-tuning for the classification task.
-GRID_SEARCH_CLF: the set of hyperparameters tested in fine-tuning for the regression task.
+To modify the hyperparameters for a CNN model training, edit the dictionaries in config.py:
+  CNN_CLF_CONFIG: hyperparameters used for classification. Currently set as the hyperparameters values optimal for drug 1 training.
+  CNN_REG_CONFIG: hyperparameters used for regression. Currently set as the hyperparameters values optimal for drug 1 training.
+  GRID_SEARCH_REG: the set of hyperparameters tested in fine-tuning for the classification task.
+  GRID_SEARCH_CLF: the set of hyperparameters tested in fine-tuning for the regression task.
 
 ## Repository Structure
 `main.py` contains the main file to be run for the project
